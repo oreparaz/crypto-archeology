@@ -1,0 +1,7 @@
+This is a highly experimental version of the software.
+To compile it, execute the shell file "compile".
+To test it, execute the shell file "testit".
+To use it, read the "man" entries for:
+"makepublickey", "sign", and "check".
+
+Good luck!

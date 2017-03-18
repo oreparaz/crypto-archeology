@@ -1,0 +1,7 @@
+/* For Experimental use
+ */
+#define PUBLIC_DIRECTORY_NAME "pubDir"
+#define MAKE_KEY_PUB_DIR_NAME "pubDir"
+#define STABLE1_DIRECTORY "privDir"
+#define STABLE2_DIRECTORY "privDir"
+#define AUX_INFO_DIRECTORY "auxDir"

@@ -1,0 +1,25 @@
+.TH "RECOVERAUXINFO" 1 "May 8, 1990" "Hash Signatures"
+.SH NAME
+recoverauxinfo - recover the auxilliary signing information
+.SH FOR EXPERIMENTAL USE ONLY
+
+.SH SYNOPSIS
+recoverauxinfo key
+.SH DESCRIPTION
+.B Recoverauxinfo
+recovers the auxilliary signing information if it is damaged or destroyed.  The auxilliary signing information can be changed, revealed, etc. without loss of security.  If it is changed, signatures made with the changed auxilliary information will be invalid.  The auxilliary information can be regenerated at any time by using this command.
+.SH EXAMPLES
+recoverauxinfo secretKey
+.PP
+The auxilliary information used by "sign" is regenerated.
+.SH FILES
+"recoverauxinfo" expects to put the auxilliary information in:
+/net/palain/rouge/auxdir.  It expects to find the machine key in the two directories (on two distinct disk drives):
+/net/palain/rouge/privdir and
+/net/palain/jaune/privdir.
+.SH "SEE ALSO"
+check(1) sign(1) destroyoldkey(1) dumpsig(1) makepublickey(1)
+.SH AUTHOR
+Ralph C. Merkle
+Copyright (C) 1990 Xerox Corporation
+All Rights Reserved

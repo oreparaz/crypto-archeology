@@ -1,0 +1,11 @@
+#! /bin/csh
+./destroyoldkey
+./makepublickey -n4 key "Fred Farckle"
+grep public privDir/*
+while (1)
+grep path privDir/*
+grep toggle privDir/*
+rm -f .JZtest
+./sign key test
+./check test
+end

@@ -1,0 +1,25 @@
+.TH "DESTROYOLDKEY" 1 "May 8, 1990" "Hash Signatures"
+.SH NAME
+destroyoldkey - destroy the machine key of the user
+.SH FOR EXPERIMENTAL USE ONLY
+
+.SH SYNOPSIS
+destroyoldkey
+.SH DESCRIPTION
+.B Destroyoldkey
+destroys the users machine key.  Following destruction of the machine key, the secret key cannot be recovered.  It is gone.  Permanently.  Previously made signatures can still be checked for validity by using the public key, which is never destroyed.  "Destroyoldkey" is normally used when the user wishes to change the secret key as a routine security precaution, or when the user suspects the key might have been compromised, and wishes to use a new key.
+.SH EXAMPLES
+destroyoldkey
+.PP
+The user's machine key is destroyed, which means
+the secret signing key is unrecoverable.
+.SH FILES
+"destroyoldkey" expects to find the secret signing keys in:
+/net/palain/rouge/privdir and
+/net/palain/jaune/privdir.
+.SH "SEE ALSO"
+check(1) sign(1) makepublickey(1) dumpsig(1) recoverauxinfo(1)
+.SH AUTHOR
+Ralph C. Merkle
+Copyright (C) 1990 Xerox Corporation
+All Rights Reserved

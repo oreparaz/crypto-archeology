@@ -1,0 +1,8 @@
+rm -f sign check makepublickey dumpsig destroyoldkey recoverauxinfo
+cc -g -o sign signCheck1.0.c h.c sb.c md4Block.c md4.c
+ln sign check
+ln sign makepublickey
+ln sign dumpsig
+ln sign destroyoldkey
+ln sign recoverauxinfo
+lint signCheck1.0.c h.c sb.c md4.c md4Block.c

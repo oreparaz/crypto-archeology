@@ -1,0 +1,40 @@
+.TH "CHECK" 1 "May 8, 1990" "Hash Signatures"
+.SH NAME
+check - check the digital signature on a file
+.SH FOR EXPERIMENTAL USE ONLY
+
+.SH SYNOPSIS
+check [ -s ] [ -v ] [ -dDirectory ] file(s)
+.SH DESCRIPTION
+.B Check
+checks the digital signature of the given files.  If the
+"-dDirectory" option is given, then check will look in
+the specified directory for the public keys and will not
+look in the standard directory.  If the "-s" flag is
+specified, all output is suppressed (which is useful when
+check is used in a shell file -- see below).  If the "-v" option is
+given, the message (if any) which was added to the signature
+during the signing process is printed out.  A status return
+of 0 indicates that the signatures for all the given files
+were valid, and that valid public keys were found for all
+the signatures in the public key directory.  This is useful
+when a shell script wants to confirm that the files have
+all been properly signed, but does not want to actually look
+at the text output produced by "check."
+.SH EXAMPLES
+check /bin/*
+.PP
+Checks all the files in /bin.  Modification of any of the
+files (by, for example, a virus) since the time the
+files were signed will be detected.  Deletion of a file
+will not be detected.
+
+.SH FILES
+"check" expects to find public checking keys in the public directory:
+/net/palain/rouge/pubdir.
+.SH "SEE ALSO"
+sign(1) makepublickey(1) destroyoldkey(1) dumpsig(1) recoverauxinfo(1)
+.SH AUTHOR
+Ralph C. Merkle
+Copyright (C) 1990 Xerox Corporation
+All Rights Reserved
