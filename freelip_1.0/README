@@ -1,0 +1,25 @@
+FreeLIP is the large integer package used in the global collaboration to
+factor the 129-digit number RSA-129 and thereby solve a 17-year old
+challenge in cryptography.
+
+This software was originally written by Arjen K Lenstra
+(lenstra@bellcore.com) but is now maintained by Paul Leyland
+(pcl@oucs.ox.ac.uk).  Bug reports, ports to novel architectures,
+enhancements, suggestions, etc should be directed to pcl.
+
+This package may be copied, redistributed and used for any
+NON-COMMERCIAL purpose but the copyright notices must remain intact.
+Neither Bellcore, Oxford University nor any of the authors offer any
+warranty whatsoever.
+
+The V1.0 release of freeLIP is adapted from the RSA-129 package -- a few
+minor bug fixes have been incorporated by Paul Leyland, and some parts
+have been modified for compatibility with the latest version of LIP (as
+can be obtained from Bellcore). The package consists of this README, the
+source code lip.c and lip.h; full PostScript documentation, a
+configuration utility liptimer.c and a wish-list of desirable
+enhancements called TODO.
+
+
+Paul Leyland  -- 1 May 1995
+
